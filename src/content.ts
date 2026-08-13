@@ -25,8 +25,8 @@ export const contact = {
   email: 'rawia.emam91@gmail.com',
   linkedin: 'linkedin.com/in/rawia-ahmed-3b372733',
   linkedinUrl: 'https://linkedin.com/in/rawia-ahmed-3b372733',
-  github: 'github.com/rawia-ahmed',
-  githubUrl: 'https://github.com/rawia-ahmed',
+  github: 'github.com/RawiaAhmed',
+  githubUrl: 'https://github.com/RawiaAhmed',
   languages: 'Arabic (native) / English (C1)',
 } as const;
 
