@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220" role="img" aria-label="React">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#646973"/>
+      <stop offset="100%" stop-color="#BBCCD7"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="8">
+    <ellipse cx="110" cy="110" rx="86" ry="33"/>
+    <ellipse cx="110" cy="110" rx="86" ry="33" transform="rotate(60 110 110)"/>
+    <ellipse cx="110" cy="110" rx="86" ry="33" transform="rotate(120 110 110)"/>
+  </g>
+  <circle cx="110" cy="110" r="17" fill="url(#g)"/>
+</svg>

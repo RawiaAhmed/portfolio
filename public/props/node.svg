@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220" role="img" aria-label="Node.js">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#646973"/>
+      <stop offset="100%" stop-color="#BBCCD7"/>
+    </linearGradient>
+  </defs>
+  <path d="M110 16 L191 63 L191 157 L110 204 L29 157 L29 63 Z"
+        fill="none" stroke="url(#g)" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M128 78 L128 132 a22 22 0 0 1 -44 0"
+        fill="none" stroke="url(#g)" stroke-width="11" stroke-linecap="round"/>
+</svg>

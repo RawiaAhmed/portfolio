@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background: #0c0c0c;
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Gradient headline treatment, reused by every section title. */
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*
+ * Focus visibility.
+ *
+ * The design is dark and low-contrast by intent, so the default focus ring is
+ * effectively invisible on it. Every interactive element gets an explicit,
+ * high-contrast ring. :focus-visible rather than :focus so it appears for
+ * keyboard users without ringing on every mouse click.
+ */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #bbccd7;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Skip link: off-screen until focused, then pinned to the top-left. */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  background: #bbccd7;
+  color: #0c0c0c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom-right-radius: 0.5rem;
+  transform: translateY(-120%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Anchored sections should not land flush under the top of the viewport. */
+:target {
+  scroll-margin-top: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+ * Page-level reduced-motion backstop. Components already check
+ * useReducedMotion, but this also covers smooth scrolling and any CSS
+ * transition that is not driven by Framer Motion.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
