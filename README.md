@@ -96,3 +96,13 @@ Static output, so any host works. Build with `npm run build` and serve `dist/`.
 On Vercel or Netlify, connect the repository and accept the defaults: build command `npm run build`, output directory `dist`.
 
 Update the absolute URLs in `index.html` (`og:image`, `twitter:image`) to the live domain once it exists, otherwise link previews will not resolve the image.
+
+---
+
+## Licence
+
+The **code** in this repository is MIT licensed. See [LICENSE](LICENSE). Use it, fork it, learn from it.
+
+The **personal content is not**, and is excluded from that grant: my name, the avatar in `public/portrait.png`, my CV in `public/Rawia_Ahmed_CV.pdf`, and the biography, experience and contact text in `src/content.ts`.
+
+If you want to reuse the site, take the components and replace `src/content.ts` and the files in `public/` with your own. That is exactly why all the copy lives in a single file.

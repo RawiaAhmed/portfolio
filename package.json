@@ -26,5 +26,8 @@
     "tailwindcss": "^3.4.1",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
-  }
+  },
+  "license": "MIT",
+  "author": "Rawia Ahmed",
+  "homepage": "https://rawia.dev"
 }
