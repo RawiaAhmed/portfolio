@@ -16,7 +16,7 @@ export const site = {
   heroTagline: 'a frontend tech lead building interfaces over genuinely complex systems',
   /** Short enough to scan in the hero. The full sentence lives in the contact section. */
   availability: 'Open to remote or relocation',
-  nav: ['About', 'Expertise', 'Experience', 'Contact'],
+  nav: ['About', 'Expertise', 'Experience', 'Projects', 'Contact'],
 } as const;
 
 export const contact = {
@@ -40,11 +40,14 @@ export const about = {
   heading: 'About me',
   body:
     'I am a Technical Team Lead and Senior Frontend Engineer with 13 years of experience. ' +
-    'I lead a team of 8 to 10 engineers and own delivery end to end, from architecture and ' +
-    'code review through testing and release, with a zero QA rejection rate sustained since ' +
-    '2022. I care most about the parts nobody sees: contracts that cannot drift, migrations ' +
-    'that can be done incrementally, and interfaces that stay honest when the system underneath ' +
-    'is only partly working.',
+    'I led a team of 8 to 10 engineers and owned delivery end to end, from architecture and ' +
+    'code review through testing and release, with a zero QA rejection rate sustained over ' +
+    '4 years. I build the interface layer over AI systems: output that streams in as it arrives, ' +
+    'retrieval that cites the line it relied on, and a human approval step in front of anything ' +
+    'a model wants to run. I authored my team\'s written standard for AI-assisted delivery, down ' +
+    'to what a generated test has to cover. I care most about the parts nobody sees: contracts that ' +
+    'cannot drift, migrations that can be done incrementally, and interfaces that stay honest ' +
+    'when the system underneath is only partly working.',
   /**
    * The four corner marks are the core stack, one per corner. These are
    * meaningful rather than decorative, so each carries real alt text.
@@ -115,7 +118,7 @@ export const experience = [
     location: 'El-Gouna, Egypt',
     period: '07/2018 - 06/2022',
     points: [
-      'Joined as the 3rd technical hire and established engineering practices from scratch, including QA processes, CI/CD pipelines and infrastructure, and helped interview and hire the growing engineering team.',
+      'One of the founding engineers: joined as the 3rd technical hire and established engineering practices from scratch, including QA processes, CI/CD pipelines and infrastructure, and helped interview and hire the growing engineering team.',
       "Designed and implemented the company's first CI/CD pipelines with Azure DevOps, before a dedicated DevOps team existed.",
       'Migrated the platform from AWS to Azure and re-architected workloads onto serverless functions, completing the full migration in under 3 months without service disruption.',
       'Built and maintained RESTful APIs and BFF services using Node.js and NestJS, serving 5 to 6 consuming applications across the platform.',
@@ -155,3 +158,42 @@ export const experience = [
   },
 ] as const;
 
+/**
+ * Public work, each with a link anyone can open. Every claim here is checkable
+ * by clicking through, which is the only reason to list a project at all.
+ */
+export const projects = [
+  {
+    number: '01',
+    name: 'postmatch',
+    tagline: 'Structured facts out of a job posting, with the evidence attached',
+    description:
+      'Streams a job posting into a typed object with the Vercel AI SDK and Claude, quoting the sentence behind every sponsorship verdict. Matches each requirement against a CV using embeddings that run in the browser, cites the line it relied on, and says "no evidence found" rather than stretching one. A UK sponsor register lookup runs only after an explicit approval click. An eval suite in CI scores 20 labelled postings at 90% field accuracy.',
+    stack: ['Next.js', 'TypeScript', 'Vercel AI SDK', 'Claude', 'transformers.js'],
+    links: [
+      { label: 'Live', href: 'https://postmatch.rawia.dev' },
+      { label: 'Source', href: 'https://github.com/RawiaAhmed/postmatch' },
+    ],
+  },
+  {
+    number: '02',
+    name: 'ngx-generic-combobox',
+    tagline: 'Accessibility as the point, not a pass at the end',
+    description:
+      'An editable combobox implementing the full WAI-ARIA 1.2 pattern, with virtual focus through aria-activedescendant rather than roving tabindex. Published on npm, MIT licensed, zero runtime dependencies. Every non-obvious decision in the source carries a comment explaining why, because "why not the other way" is the part that normally gets lost.',
+    stack: ['Angular 22', 'Signals', 'TypeScript'],
+    links: [
+      { label: 'npm', href: 'https://npmjs.com/package/ngx-generic-combobox' },
+      { label: 'Source', href: 'https://github.com/RawiaAhmed/ngx-generic-combobox' },
+    ],
+  },
+  {
+    number: '03',
+    name: 'fleet-assistant',
+    tagline: 'Streaming an LLM answer without lying about the state',
+    description:
+      'An assistant over a fleet of connected devices, streaming answers over server-sent events through a NestJS backend-for-frontend. Connecting and streaming are distinct states, a partial answer is retained rather than discarded when a stream drops, and retry is bounded. The answer region is a polite live region, so the stream is usable with a screen reader.',
+    stack: ['Angular 22', 'Signals', 'NestJS', 'SSE'],
+    links: [{ label: 'Source', href: 'https://github.com/RawiaAhmed/fleet-assistant' }],
+  },
+] as const;
