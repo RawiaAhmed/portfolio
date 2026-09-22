@@ -11,9 +11,9 @@
 
 export const site = {
   name: 'Rawia Ahmed',
-  title: 'Rawia Ahmed -- Frontend Tech Lead',
+  title: 'Rawia Ahmed -- Frontend Tech Lead building AI-powered products',
   heroHeading: "Hi, i'm rawia",
-  heroTagline: 'a frontend tech lead building interfaces over genuinely complex systems',
+  heroTagline: 'a frontend tech lead building the interface layer over AI systems',
   /** Short enough to scan in the hero. The full sentence lives in the contact section. */
   availability: 'Open to remote or relocation',
   nav: ['About', 'Expertise', 'Experience', 'Projects', 'Contact'],
