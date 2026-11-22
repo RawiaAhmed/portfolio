@@ -194,6 +194,9 @@ export const projects = [
     description:
       'An assistant over a fleet of connected devices, streaming answers over server-sent events through a NestJS backend-for-frontend. Connecting and streaming are distinct states, a partial answer is retained rather than discarded when a stream drops, and retry is bounded. The answer region is a polite live region, so the stream is usable with a screen reader.',
     stack: ['Angular 22', 'Signals', 'NestJS', 'SSE'],
-    links: [{ label: 'Source', href: 'https://github.com/RawiaAhmed/fleet-assistant' }],
+    links: [
+      { label: 'Live demo', href: 'https://rawiaahmed.github.io/fleet-assistant/' },
+      { label: 'Source', href: 'https://github.com/RawiaAhmed/fleet-assistant' },
+    ],
   },
 ] as const;
